@@ -1,2 +1,2 @@
 #!/bin/bash
-chown betty hello
+chown betty "$(ls -d hello 2>/dev/null || echo hello)"
