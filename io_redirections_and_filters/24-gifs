@@ -1,2 +1,4 @@
 #!/bin/bash
-find . -type f -name "*.gif" -printf "%f\n" | cut -d "." -f 1 | sort -f
+find . -type f -name "*.gif" -printf "%f\n" | while read -r file; do
+    echo "${file%.gif}"
+done | sort -f
